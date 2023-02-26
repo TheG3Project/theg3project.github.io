@@ -1,53 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- HTML Codes by Quackit.com -->
 <title>
 The G3 Project</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="g3 project, leopard g3, 10.5 g3, leopard 10.5 g3, g3 10.5.8, leopard unsupported">
 <meta name="description" content="The ultimate project to get OS X Leopard 10.5 running on a PowerPC G3 Mac">
 <style>
-body {background-color:#ffffff;background-image:url(https://static1.squarespace.com/static/5e949a92e17d55230cd1d44f/t/612e9f390da1f36c7e07f43d/1630445427184/macOS_Tiger_OGBlue_6K.png);background-repeat:no-repeat;background-position:center center;background-attachment:fixed;}
+body {background-color:#ffffff;background-repeat:no-repeat;background-position:center center;background-attachment:fixed;}
 h1{font-family:Helvetica, sans-serif;color:#000000;background-color:#ffffff;}
-p {font-family:Helvetica, sans-serif;font-size:14px;font-style:normal;font-weight:bold;color:#000000;background-color:#ffffff;}
+p {font-family:Helvetica, sans-serif;font-size:14px;font-style:normal;font-weight:normal;color:#000000;background-color:#ffffff;}
 </style>
 </head>
 <body>
-<h1>OS X Leopard on a G3</h1>
-<p>First step: Download your chosen beta build of OS X Leopard (up to 9A303). Extract it.</p>
-<p></p>
-<p>Step two: Mount the image and go to System/Installation/Packages. Inside ”Packages”, find OSInstall.mpkg. Right-click the file and open with TextEdit.</p>
-<p>Open with TextEdit and delete OSmodelCheck.</p>
-<p>Next, change hwbeSupportedMachines to the model identifier of the Mac you are installing it on.</p>
-<p>Delete the BadMachines.</p>
-<p>Change the return false to return true to install on a G3 in the code below: var minRam = 512;</p>
-<p>function checkSupportedMachine(machineType){</p>
-<p>// Fail on G3</p>
-<p>if (1 != system.sysctl('hw.vectorunit') ) {</p>
-<p>return false;</p>
-<p>}</p>
-<p>var badMachines = ['MacBook3,1','iMac','PowerBook1,1','PowerBook2,1', 'AAPL,Gossamer', 'AAPL,PowerMac G3', 'AAPL,PowerBook1998', 'AAPL,PowerBook1999'];</p>
-<p>if(machineType){</p>
-<p>var length = badMachines.length;</p>
-<p>// Fail if any of the compatible values match the list of badMachines</p>
-<p>for( var j = 0; j < length; j++ ){</p>
-<p>if(machineType == badMachines[j]){</p>
-<p>return false;</p>
-<p>}</p>
-<p>}</p>
-<p>}</p>
-<p>// require 867Mhz+</p>
-<p>if (system.sysctl("hw.cpufrequency") < 866000000) {</p>
-<p>return false;</p>
-<p>}</p>
-<p>return true;</p>
-<p>} </p>
-<p>Let’s edit the processor speed. In the code below, xxx represents the processor speed. Set it to 200, for 200MHz. if (system.sysctl("hw.cpufrequency") < xxx000000) {</p>
-<p>return false;</p>
-<p>Now, edit the RAM requirements. We recommend at least 750MB. However, you can run this with less RAM. It’ll be slow though. In the following code, change 512 to 400: var minRam = 512;</p>
-<p>Once you finished all of your edits, save the file with TextEdit.</p>
-<p>Congrats! You have successfully edited the installer. Make sure that you saved your work. Now proceed to the install!</p>
-<p>Install using a (Dual Layer) DVD, Firewire, or USB flash drive.</p>
+<h1>OS X Leopard on a G3: Getting Leopard on an Unsupported Mac</h1>
+<p>Hey there! This page has been created by christiann from MacRumors Forums. If you are trying to run Leopard on your G3, you are in the right hands!</p>
 </body>
 </html>
